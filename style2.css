@@ -1,0 +1,62 @@
+.jadwal-pelajaran {
+    text-align: center;
+}
+
+table {
+    margin: 50px auto;
+    border-spacing: 0px;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: teal;
+    color: lightblue;
+    padding: 10px;
+    border: 1px solid steelblue;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid teal;
+}
+.baris-istirahat {
+    text-align: center;
+    background-color: deepskyblue;
+    color: #64748b;
+}
+/*td:empty {
+    border:none;
+}*/
+
+.kontainer-tabel {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.link-tabel {
+    display: inline-block;
+    text-decoration: none;
+    color: #0066cc;
+    font-weight: bold;
+    background-color: dodgerblue;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0, 0.2);
+    cursor: pointer
+}
+
+.link-tabel:hover {
+    background-color: dodgerblue;
+}
+.tombol {
+    padding: 10px 20px;
+    background: dodgerblue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

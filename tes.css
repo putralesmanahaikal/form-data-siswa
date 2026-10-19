@@ -1,0 +1,90 @@
+.jadwal-pelajaran {
+    text-align: center;
+    color: #333;
+}
+
+table {
+    margin: 50px auto;
+    border-spacing: 0px;
+    border-collapse: collapse;
+}
+
+th {
+    background-color: teal;
+    color: lightblue;
+    padding: 10px;
+    border: 1px solid steelblue;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid teal;
+}
+
+.baris-istirahat {
+    text-align: center;
+    background-color: deepskyblue;
+    color: white;
+    font-weight: bold;
+}
+
+/* Styling untuk bagian Keterangan (dl, dt, dd) */
+.kontainer-keterangan {
+    width: 80%;
+    max-width: 600px;
+    margin: 30px auto;
+}
+
+.kontainer-keterangan h3 {
+    color: teal;
+}
+
+dl {
+    background-color: #f8fafc;
+    padding: 15px 20px;
+    border-radius: 5px;
+    border: 1px solid #cbd5e1;
+}
+
+dt {
+    font-weight: bold;
+    color: #0f172a;
+    margin-top: 10px;
+}
+
+dt:first-child {
+    margin-top: 0;
+}
+
+dd {
+    margin-left: 20px;
+    color: #475569;
+    margin-bottom: 5px;
+}
+
+/* Styling Tombol Melayang */
+.kontainer-tabel {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.link-tabel {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background-color: dodgerblue;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.link-tabel:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,88 @@
+body{
+    background-image: url(https://images.hdqwalls.com/wallpapers/luffy-onepiece-anime-lp.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+}
+
+.teks-berjalan {
+    color: rgb(78, 153, 223);
+    display: inline-block;
+    white-space: nowrap;
+    animation: jalan 12s linear infinite;
+}
+
+@keyframes jalan {
+    from {
+        transfrom: TranslateX(100%);
+    }
+
+    to {
+        transform: translateX(300%);
+    }  
+}    
+
+*{
+    box-sizing: border-box;
+}
+
+
+
+details {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: #fefeff;
+}
+.popup {
+    width: 300px;
+}
+.popup summary {
+    padding: 14px;
+    background: #2563eb;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    list-style: none;
+}
+
+.popup summary:hover {
+    background: #1d4ed8;
+}
+
+/* kotak popup */
+.popup-box {
+    margin-top: 12px;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0.15);
+
+    animation: popup 0.9s ease;
+}
+.popup-box h2 {
+    margin-top: 0;
+}
+
+.info {
+    color: #64748b;
+    font-size: 14px;
+}
+/* animasi */
+@keyframes popup {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+

@@ -1,0 +1,205 @@
+/* --- Pengaturan Dasar & Variabel Warna (Futuristic Dark Theme) --- */
+:root {
+    --bg-dark: #090d16;
+    --card-bg: rgba(17, 24, 39, 0.75);
+    --primary-neon: #38bdf8;
+    --primary-hover: #0ea5e9;
+    --accent-glow: rgba(56, 189, 248, 0.25);
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --border-color: rgba(255, 255, 255, 0.1);
+    --border-focus: #38bdf8;
+    --radius: 12px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Background Glowing Ambient Effect */
+.background-glow {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(56, 189, 248, 0.15) 0%, rgba(147, 51, 234, 0.05) 70%, transparent 100%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+    filter: blur(80px);
+    pointer-events: none;
+}
+
+/* --- Container Form (Glassmorphism) --- */
+.form-container {
+    background: var(--card-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--border-color);
+    width: 100%;
+    max-width: 540px;
+    padding: 40px;
+    border-radius: var(--radius);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+/* --- Header Form --- */
+.form-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    background: linear-gradient(135deg, #ffffff 0%, var(--primary-neon) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 6px;
+}
+
+.form-header p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* --- Input Group & Label --- */
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.group-label {
+    margin-bottom: 10px;
+    color: var(--text-main);
+}
+
+/* --- Input, Select --- */
+input[type="text"],
+input[type="date"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 0.95rem;
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    color: var(--text-main);
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+select option {
+    background-color: #0f172a;
+    color: var(--text-main);
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="email"]:focus,
+select:focus {
+    border-color: var(--border-focus);
+    box-shadow: 0 0 0 4px var(--accent-glow);
+    background: rgba(15, 23, 42, 0.9);
+}
+
+/* --- Grid Options (Checkbox & Radio) --- */
+.options-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.gender-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.option-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    background: rgba(15, 23, 42, 0.4);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.option-wrapper:hover {
+    background: rgba(56, 189, 248, 0.08);
+    border-color: rgba(56, 189, 248, 0.3);
+}
+
+.option-wrapper input[type="checkbox"],
+.option-wrapper input[type="radio"] {
+    accent-color: var(--primary-neon);
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.option-wrapper label {
+    margin-bottom: 0;
+    cursor: pointer;
+    color: var(--text-main);
+    text-transform: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* --- Tombol Submit --- */
+.submit-btn {
+    width: 100%;
+    background: linear-gradient(135deg, var(--primary-neon) 0%, #0284c7 100%);
+    color: #090d16;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 14px;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    box-shadow: 0 4px 20px rgba(56, 189, 248, 0.4);
+}
+
+.submit-btn:hover {
+    background: linear-gradient(135deg, var(--primary-hover) 0%, #0369a1 100%);
+    box-shadow: 0 6px 25px rgba(56, 189, 248, 0.6);
+    transform: translateY(-2px);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
